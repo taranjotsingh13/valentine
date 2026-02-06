@@ -1,134 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Be My Valentine 💘</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be My Valentine 💘</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            font-family: 'Poppins', sans-serif;
-            overflow: hidden;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        .card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 22px;
-            text-align: center;
-            box-shadow: 0 30px 70px rgba(0,0,0,0.25);
-            width: 380px;
-            position: relative;
-            animation: pop 0.8s ease;
-        }
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    padding: 16px;
+}
 
-        @keyframes pop {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
+/* CARD */
+.card {
+    background: white;
+    padding: 28px 22px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.25);
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    animation: pop 0.8s ease;
+}
 
-        h1 {
-            color: #ff4d6d;
-            margin-bottom: 10px;
-        }
+@keyframes pop {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
 
-        .subtitle {
-            color: #666;
-            font-size: 14px;
-        }
+/* TEXT */
+h1 {
+    color: #ff4d6d;
+    margin-bottom: 10px;
+    font-size: clamp(22px, 5vw, 28px);
+}
 
-        .buttons {
-            margin-top: 30px;
-            position: relative;
-            height: 120px;
-        }
+.subtitle {
+    color: #666;
+    font-size: clamp(13px, 3.5vw, 14px);
+}
 
-        button {
-            padding: 12px 28px;
-            font-size: 16px;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            margin: 10px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+/* BUTTON AREA */
+.buttons {
+    margin-top: 26px;
+    position: relative;
+    height: 120px;
+}
 
-        button:hover {
-            transform: scale(1.08);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
+button {
+    padding: 12px 26px;
+    font-size: clamp(14px, 4vw, 16px);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-        #yesBtn {
-            background: linear-gradient(135deg, #ff4d6d, #ff758c);
-            color: white;
-        }
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
 
-        #noBtn {
-            background-color: #ddd;
-            position: absolute;
-            left: 55%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
+#yesBtn {
+    background: linear-gradient(135deg, #ff4d6d, #ff758c);
+    color: white;
+}
 
-        .message {
-            display: none;
-            font-size: 17px;
-            color: #ff4d6d;
-            animation: fadeIn 1s ease;
-            line-height: 1.6;
-        }
+#noBtn {
+    background-color: #ddd;
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(12px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+/* MESSAGE */
+.message {
+    display: none;
+    font-size: clamp(14px, 4vw, 17px);
+    color: #ff4d6d;
+    animation: fadeIn 1s ease;
+    line-height: 1.6;
+}
 
-        .queen {
-            font-size: 20px;
-            margin: 18px 0;
-            font-weight: 600;
-        }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-        .love {
-            font-size: 22px;
-            margin-top: 15px;
-        }
+.queen {
+    font-size: clamp(16px, 4.5vw, 20px);
+    margin: 16px 0;
+    font-weight: 600;
+}
 
-        .footer {
-            margin-top: 18px;
-            font-size: 14px;
-            color: #777;
-        }
+.love {
+    font-size: clamp(18px, 5vw, 22px);
+    margin-top: 14px;
+}
 
-        /* Floating hearts */
-        .heart {
-            position: absolute;
-            color: rgba(255,255,255,0.85);
-            font-size: 20px;
-            animation: float 6s linear infinite;
-        }
+.footer {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #777;
+}
 
-        @keyframes float {
-            from {
-                transform: translateY(100vh);
-                opacity: 1;
-            }
-            to {
-                transform: translateY(-10vh);
-                opacity: 0;
-            }
-        }
-    </style>
+/* FLOATING HEARTS */
+.heart {
+    position: absolute;
+    color: rgba(255,255,255,0.85);
+    font-size: clamp(16px, 5vw, 22px);
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+
+/* EXTRA MOBILE POLISH */
+@media (max-width: 360px) {
+    .buttons {
+        height: 100px;
+    }
+
+    button {
+        padding: 10px 22px;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <div class="card" id="card">
@@ -151,7 +174,6 @@
         and every beautiful dream ahead ✨  
         <br><br>
 
-
         <div class="queen">
             👑 Now you are the <strong>Queen of Taranjot Singh</strong> 👑  
             <br>
@@ -168,59 +190,61 @@
         </div>
 
         <div class="footer">
-            With all my love,  
-            <br>
+            With all my love,<br>
             Taranjot Singh 💫
         </div>
     </div>
-    
 </div>
+
 <script>
-    const noBtn = document.getElementById('noBtn');
-    const yesBtn = document.getElementById('yesBtn');
-    const message = document.getElementById('message');
-    const card = document.getElementById('card');
+const noBtn = document.getElementById('noBtn');
+const yesBtn = document.getElementById('yesBtn');
+const message = document.getElementById('message');
+const card = document.getElementById('card');
 
-    function moveNoButton() {
-        const cardRect = card.getBoundingClientRect();
+function moveNoButton() {
+    const cardRect = card.getBoundingClientRect();
 
-        const x = Math.random() * (cardRect.width - noBtn.offsetWidth);
-        const y = Math.random() * (cardRect.height - noBtn.offsetHeight);
+    const x = Math.random() * (cardRect.width - noBtn.offsetWidth);
+    const y = Math.random() * (cardRect.height - noBtn.offsetHeight);
 
-        noBtn.style.left = x + 'px';
-        noBtn.style.top = y + 'px';
+    noBtn.style.left = Math.max(0, x) + 'px';
+    noBtn.style.top = Math.max(0, y) + 'px';
+}
+
+// Desktop
+noBtn.addEventListener('mouseenter', moveNoButton);
+
+// Mobile
+noBtn.addEventListener('touchstart', moveNoButton);
+
+// Block click
+noBtn.addEventListener('click', e => {
+    e.preventDefault();
+    e.stopPropagation();
+});
+
+// YES
+yesBtn.addEventListener('click', () => {
+    card.querySelector('h1').style.display = 'none';
+    document.querySelector('.subtitle').style.display = 'none';
+    document.querySelector('.buttons').style.display = 'none';
+    message.style.display = 'block';
+    createHearts();
+});
+
+function createHearts() {
+    for (let i = 0; i < 24; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.innerHTML = '❤️';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
     }
-
-    // Desktop
-    noBtn.addEventListener('mouseenter', moveNoButton);
-
-    // Mobile (very important)
-    noBtn.addEventListener('touchstart', moveNoButton);
-
-    // Block click completely
-    noBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-    });
-
-    // YES click
-    yesBtn.addEventListener('click', () => {
-        card.querySelector('h1').style.display = 'none';
-        document.querySelector('.subtitle').style.display = 'none';
-        document.querySelector('.buttons').style.display = 'none';
-        message.style.display = 'block';
-        createHearts();
-    });
-
-    function createHearts() {
-        for (let i = 0; i < 24; i++) {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 6000);
-        }
-    }
+}
 </script>
+
+</body>
+</html>
